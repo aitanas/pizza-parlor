@@ -38,19 +38,16 @@ function handlePizzaOrder(e) {
   e.preventDefault();
 
   const pizzaSize = document.getElementById("pizza-size").value;
-  let toppingSelections = document.querySelectorAll("input[name=toppings]:checked");
+  let toppingInput = document.querySelectorAll("input[name=toppings]:checked").value;
+  let toppingArray = Array.from(toppingInput);
 
-  function makeCleanArray(array) {
-    let newString = array.join(" ");
-    newString.replace
+  toppingArray.forEach(function(element) {
+    let toppings = [];
+    toppings.push(element.value);
+    console.log(toppings);
+  });
 
-  }
-
-  let toppings = toppingSelection.forEach(element function() {
-    element.
-  }) 
-
-  let pizzaOrder = new Pizza([toppingSelections], pizzaSize);
+  let pizzaOrder = new Pizza([toppings], pizzaSize);
   console.log(pizzaOrder)
 }
 
