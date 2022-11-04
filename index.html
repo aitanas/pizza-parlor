@@ -9,37 +9,40 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <p>Welcome to our pizza parlor! Please enter your order below:</p>
-  <form id="pizza-order">
-    <label for="pizza-size">Pizza Size</label>
-    <select name="pizza-size" id="pizza-size">
-      <option value="">--Please choose an option--</option>
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-    </select>
-      <fieldset>
-        <legend>Choose your pizza toppings:</legend>
-        <div>
-          <input type="checkbox" id="olives" name="toppings" checked>
-          <label for="olives">Olives</label>
-          <input type="checkbox" id="peppers" name="toppings">
-          <label for="peppers">Peppers</label>
-          <input type="checkbox" id="tomato" name="toppings">
-          <label for="tomato">Tomato</label>
-          <input type="checkbox" id="onion" name="toppings">
-          <label for="onion">Onion</label>
-        </div>
-        <div>
-          <input type="checkbox" id="artichoke" name="toppings">
-          <label for="artichoke">Artichoke</label>
-          <input type="checkbox" id="chicken" name="toppings">
-          <label for="chicken">Chicken</label>
-          <input type="checkbox" id="ham" name="toppings">
-          <label for="ham">Ham</label>
-        </div>
-    </fieldset>
-    <button type="submit">Submit!</button>
-  </form>
+  <div class="container">
+    <div class="jumbotron"><h1>Pizza Parlor</h1></div>
+    <p>Welcome to our pizza parlor! Please enter your order below:</p>
+    <form id="pizza-order">
+      <label for="pizza-size">Pizza Size</label>
+      <select name="pizza-size" id="pizza-size">
+        <option value="">--Please choose an option--</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+        <fieldset>
+          <legend>Choose your pizza toppings:</legend>
+          <div>
+            <input type="checkbox" id="olives" name="toppings" checked>
+            <label for="olives">Olives</label>
+            <input type="checkbox" id="peppers" name="toppings">
+            <label for="peppers">Peppers</label>
+            <input type="checkbox" id="tomato" name="toppings">
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" id="onion" name="toppings">
+            <label for="onion">Onion</label>
+          </div>
+          <div>
+            <input type="checkbox" id="artichoke" name="toppings">
+            <label for="artichoke">Artichoke</label>
+            <input type="checkbox" id="chicken" name="toppings">
+            <label for="chicken">Chicken</label>
+            <input type="checkbox" id="ham" name="toppings">
+            <label for="ham">Ham</label>
+          </div>
+      </fieldset>
+      <button type="submit">Submit!</button>
+    </form>
+  </div>
 </body>
 </html>
