@@ -36,6 +36,10 @@ Describe Pizza.prototype.getCost()
 Test: It will return the price of a small, medium, or large Pizza with no toppings.
 Code: pizza.getCost(pizza);
 Expected Output: 25.00
+
+Test: It will calculate the price of each topping and the price of the pizza size. The topping price and pizza price will be added together and returned.
+Code: pizza.getCost(pizza);
+Expected Output: 27.50
 ```
 
 ## Known Bugs
