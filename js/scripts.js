@@ -33,15 +33,27 @@ Pizza.prototype.getCost = function(pizza) {
 
 // UI Logic
 
+
 function handlePizzaOrder(e) {
   e.preventDefault();
-  
+
   const pizzaSize = document.getElementById("pizza-size").value;
-  const toppingSelections = document.querySelectorAll("input[name=toppings]:checked");
-  console.log(pizzaSize)
-  console.log(toppingSelections)
+  let toppingSelections = document.querySelectorAll("input[name=toppings]:checked");
+
+  function makeCleanArray(array) {
+    let newString = array.join(" ");
+    newString.replace
+
+  }
+
+  let toppings = toppingSelection.forEach(element function() {
+    element.
+  }) 
+
+  let pizzaOrder = new Pizza([toppingSelections], pizzaSize);
+  console.log(pizzaOrder)
 }
 
 window.addEventListener("load", function () {
-  document.querySelector("form").addEventListener("submit", handlePizzaOrder);
+  document.querySelector("form#pizza-order").addEventListener("submit", handlePizzaOrder);
 });
