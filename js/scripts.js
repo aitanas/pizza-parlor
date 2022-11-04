@@ -1,3 +1,5 @@
+// Business Logic
+
 function Pizza (toppings, size) {
 this.toppings = toppings;
 this.size = size;
@@ -24,6 +26,18 @@ Pizza.prototype.getCost = function(pizza) {
     toppingsCost += 1.00; }
   if (pizza.toppings.includes('ham') || pizza.toppings.includes('chicken')) {
     toppingsCost += 2.00; }
+
   let totalCost = cost + toppingsCost;
   return totalCost;
 };
+
+// UI Logic
+
+function handlePizzaOrder(e) {
+  e.preventDefault();
+  
+}
+
+window.addEventListener("load", function () {
+  document.querySelector("form").addEventListener("submit", handlePizzaOrder);
+});
