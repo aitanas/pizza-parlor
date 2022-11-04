@@ -13,3 +13,12 @@ h1 {
   font-weight: 300;
   text-align: center;
 }
+
+.floating {
+  animation: floating 3s ease-in infinite;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 10%;
+  height: 10%;
+}
