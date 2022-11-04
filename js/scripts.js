@@ -52,13 +52,14 @@ function handlePizzaOrder(e) {
   // console.log(toppings);
   let pizzaOrder = new Pizza([toppingArray], pizzaSize);
   console.log(pizzaOrder)
-  console.log(`Your total is ${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
 
   const paragraph = document.createElement("p");
   const h2 = document.createElement("h2");
+  const div = document.getElementById("result").innerText;
   h2.append("Order placed!");
   paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
-  document.body.append(h2, paragraph);
+  document.body.append(div);
+  div.append(h2, paragraph);
 }
 
 window.addEventListener("load", function () {

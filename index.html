@@ -9,11 +9,11 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="main">
     <div class="jumbotron"><h1>Pizza Parlor</h1></div>
     <p>Welcome to our pizza parlor! Please enter your order below:</p>
     <form id="pizza-order">
-      <label for="pizza-size">Pizza Size</label>
+      <label for="pizza-size">Pizza Size</label><br>
       <select name="pizza-size" id="pizza-size">
         <option value="">--Please choose an option--</option>
         <option value="small">Small</option>
@@ -43,6 +43,9 @@
       </fieldset>
       <button type="submit">Submit!</button>
     </form>
+  </div>
+  <div class="container" id="result">
+    <!--js will append here-->
   </div>
 </body>
 </html>
