@@ -1,0 +1,15 @@
+#pizza-order {
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+  text-align: justify;
+  width: 50%;
+  height: 600px;
+}
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+}
