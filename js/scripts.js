@@ -15,5 +15,15 @@ Pizza.prototype.getCost = function(pizza) {
     case 'large':
       cost += 25.00
       break;
-  } return cost;
+  }
+
+  let toppingsCost = 0;
+  if (pizza.toppings.includes('olives') || pizza.toppings.includes('onion') || pizza.toppings.includes('peppers')) {
+    toppingsCost += 0.50; }
+  if (pizza.toppings.includes('artichoke') || pizza.toppings.includes('tomato')) {
+    toppingsCost += 1.00; }
+  if (pizza.toppings.includes('ham') || pizza.toppings.includes('chicken')) {
+    toppingsCost += 2.00; }
+  let totalCost = cost + toppingsCost;
+  return totalCost;
 };
