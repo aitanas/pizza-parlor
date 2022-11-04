@@ -30,6 +30,12 @@ Describe Pizza()
 Test: It will return a Pizza object with two properties, 'toppings' and 'size'.
 Code: let pizza = new Pizza(["artichoke", "olives"], "large");
 Expected Output: pizza { toppings: ["artichoke", "olives"], size: "large" }
+
+Describe Pizza.prototype.getCost()
+
+Test: It will return the price of a small, medium, or large Pizza with no toppings.
+Code: pizza.getCost('large')
+Expected Output: 20
 ```
 
 ## Known Bugs
