@@ -38,17 +38,27 @@ function handlePizzaOrder(e) {
   e.preventDefault();
 
   const pizzaSize = document.getElementById("pizza-size").value;
-  let toppingInput = document.querySelectorAll("input[name=toppings]:checked");
+  let toppingInput = document.querySelectorAll("input[name=toppings]:checked"); // NodeList
+
+  // toppingInput.forEach(function () {
+
+  // });
 
   let toppingArray = Array.from(toppingInput);
-  let toppings = [];
-  toppingArray.forEach(function(element) {
-    toppings.push(element.value);
-  });
-  console.log(toppings);
-  let pizzaOrder = new Pizza([toppings], pizzaSize);
+  // let toppings = [];
+  // toppingArray.forEach(function(element) {
+  //   toppings.push(element.value);
+  // });
+  // console.log(toppings);
+  let pizzaOrder = new Pizza([toppingArray], pizzaSize);
   console.log(pizzaOrder)
   console.log(`Your total is ${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
+
+  const paragraph = document.createElement("p");
+  const h2 = document.createElement("h2");
+  h2.append("Order placed!");
+  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
+  document.body.append(h2, paragraph);
 }
 
 window.addEventListener("load", function () {
