@@ -38,17 +38,17 @@ function handlePizzaOrder(e) {
   e.preventDefault();
 
   const pizzaSize = document.getElementById("pizza-size").value;
-  let toppingInput = document.querySelectorAll("input[name=toppings]:checked").value;
-  let toppingArray = Array.from(toppingInput);
+  let toppings = document.querySelectorAll("input[name=toppings]:checked");
+  // let toppingArray = Array.from(toppingInput);
 
-  toppingArray.forEach(function(element) {
-    let toppings = [];
-    toppings.push(element.value);
-    console.log(toppings);
-  });
-
+  // toppingArray.forEach(function(element) {
+  //   let toppings = [];
+  //   toppings.push(element.value);
+  // });
   let pizzaOrder = new Pizza([toppings], pizzaSize);
-  console.log(pizzaOrder)
+  console.log(pizzaOrder);
+  pizzaOrder.getCost(pizzaOrder);
+  console.log(`Your total is ${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
 }
 
 window.addEventListener("load", function () {
