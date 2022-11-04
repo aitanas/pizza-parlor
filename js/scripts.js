@@ -36,6 +36,10 @@ Pizza.prototype.getCost = function(pizza) {
 function handlePizzaOrder(e) {
   e.preventDefault();
   
+  const pizzaSize = document.getElementById("pizza-size").value;
+  const toppingSelections = document.querySelectorAll("input[name=toppings]:checked");
+  console.log(pizzaSize)
+  console.log(toppingSelections)
 }
 
 window.addEventListener("load", function () {
