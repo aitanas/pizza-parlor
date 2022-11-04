@@ -33,33 +33,29 @@ Pizza.prototype.getCost = function(pizza) {
 
 // UI Logic
 
-
 function handlePizzaOrder(e) {
   e.preventDefault();
+  const paragraph = document.createElement("p");
+  const h2 = document.createElement("h2");
+  paragraph.remove();
+  h2.remove();
 
   const pizzaSize = document.getElementById("pizza-size").value;
   let toppingInput = document.querySelectorAll("input[name=toppings]:checked"); // NodeList
-
-  // toppingInput.forEach(function () {
-
-  // });
-
   let toppingArray = Array.from(toppingInput);
-  // let toppings = [];
-  // toppingArray.forEach(function(element) {
-  //   toppings.push(element.value);
-  // });
-  // console.log(toppings);
-  let pizzaOrder = new Pizza([toppingArray], pizzaSize);
-  console.log(pizzaOrder)
+  const toppings = [];
 
-  const paragraph = document.createElement("p");
-  const h2 = document.createElement("h2");
-  const div = document.getElementById("result").innerText;
+  toppingArray.forEach(function(element) {
+    toppings.push(element.value);
+    console.log(toppings)
+  });
+
+  let pizzaOrder = new Pizza(toppings, pizzaSize);
+  console.log(pizzaOrder)
   h2.append("Order placed!");
   paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
-  document.body.append(div);
-  div.append(h2, paragraph);
+  document.body.append(h2, paragraph);
+  
 }
 
 window.addEventListener("load", function () {
