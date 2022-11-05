@@ -35,11 +35,9 @@ Pizza.prototype.getCost = function(pizza) {
 
 function handlePizzaOrder(e) {
   e.preventDefault();
+
   const paragraph = document.createElement("p");
   const h2 = document.createElement("h2");
-  paragraph.remove();
-  h2.remove();
-
   const pizzaSize = document.getElementById("pizza-size").value;
   let toppingInput = document.querySelectorAll("input[name=toppings]:checked"); // NodeList
   let toppingArray = Array.from(toppingInput);
@@ -47,17 +45,25 @@ function handlePizzaOrder(e) {
 
   toppingArray.forEach(function(element) {
     toppings.push(element.value);
-    console.log(toppings)
   });
 
   let pizzaOrder = new Pizza(toppings, pizzaSize);
   console.log(pizzaOrder)
-  h2.append("Order placed!");
-  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}. Thank you!`);
-  document.body.append(h2, paragraph);
   
+  h2.append("Order placed!");
+  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`);
+  document.body.append(h2, paragraph);
+}
+
+function clearPizzaOrder (e) {
+  e.preventDefault();
+  const h2Element = document.querySelector("h2");
+  const pElement = document.querySelector("p");
+  h2Element.remove();
+  pElement.remove();
 }
 
 window.addEventListener("load", function () {
   document.querySelector("form#pizza-order").addEventListener("submit", handlePizzaOrder);
+  document.querySelector("button#reset").addEventListener("click", clearPizzaOrder);
 });
