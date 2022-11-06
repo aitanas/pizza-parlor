@@ -10,18 +10,19 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <img src="img/pizza-pixel.jpeg" class="floating">
+  <img src="img/pizza-dancing.gif" class="floating">
   <div class="container" id="main">
     <h1>Pizza Parlor</h1>
-    <span>Welcome to our pizza parlor! Please enter your order below:</span>
+    <span id="intro">Welcome to our pizza parlor! Please enter your order below:</span>
     <form id="pizza-order">
-      <label for="pizza-size">Pizza Size</label><br>
+      <legend><label for="pizza-size">Pizza Size</label></legend>
       <select name="pizza-size" id="pizza-size">
         <option value="">--Please choose an option--</option>
         <option value="small">Small</option>
         <option value="medium">Medium</option>
         <option value="large">Large</option>
       </select>
+      <hr>
         <fieldset>
           <legend>Choose your pizza toppings:</legend>
           <div>

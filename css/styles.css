@@ -1,5 +1,12 @@
 #pizza-order {
   text-align: center;
+  margin: 15px;
+  background-color: #fff1dbb5;
+  padding: 20px;
+}
+
+body {
+  background-color: #fc8e74;
 }
 
 .container {
@@ -11,16 +18,26 @@
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 800;
   text-align: center;
 }
 
+h2 {
+  font-weight: 800;
+}
+
+p {
+  font-weight: 300;
+}
+
+#intro {
+  padding: 10px;
+  font-weight: 350;
+}
+
 .floating {
-  animation: floating 3s ease-in infinite;
   position: absolute;
   bottom: 100px;
   right: 100px;
-  width: 10%;
-  height: 10%;
 }
 
