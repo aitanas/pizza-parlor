@@ -41,8 +41,8 @@ function handlePizzaOrder(e) {
   const pizzaSize = document.getElementById("pizza-size").value;
   let toppingInput = document.querySelectorAll("input[name=toppings]:checked");
   let toppingArray = Array.from(toppingInput);
-  const toppings = [];
 
+  const toppings = [];
   toppingArray.forEach(function(element) {
     toppings.push(element.value);
   });
