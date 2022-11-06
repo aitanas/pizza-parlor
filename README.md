@@ -1,7 +1,9 @@
 # Pizza Parlor
-### A JavaScript Application
+#### A JavaScript Application
 
 ##### By Aitana Shough
+
+Pizza Parlor is a website that allows the user to build a pizza with their toppings of choice. On submit, the total cost of the pizza is printed to the screen. The 'pizza' is created using JavaScript objects and finding the cost of the pizza is an object method.
 
 ## Technologies Used
 
