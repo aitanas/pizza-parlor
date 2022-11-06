@@ -39,7 +39,7 @@ function handlePizzaOrder(e) {
   const paragraph = document.createElement("p");
   const h2 = document.createElement("h2");
   const pizzaSize = document.getElementById("pizza-size").value;
-  let toppingInput = document.querySelectorAll("input[name=toppings]:checked"); // NodeList
+  let toppingInput = document.querySelectorAll("input[name=toppings]:checked");
   let toppingArray = Array.from(toppingInput);
   const toppings = [];
 
@@ -53,6 +53,7 @@ function handlePizzaOrder(e) {
   h2.append("Order placed!");
   paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`);
   document.body.append(h2, paragraph);
+  document.getElementById("submit").disabled = true;
 }
 
 function clearPizzaOrder (e) {
@@ -61,6 +62,7 @@ function clearPizzaOrder (e) {
   const pElement = document.querySelector("p");
   h2Element.remove();
   pElement.remove();
+  document.getElementById("submit").disabled = false;
 }
 
 window.addEventListener("load", function () {
