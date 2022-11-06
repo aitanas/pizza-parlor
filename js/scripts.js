@@ -20,12 +20,14 @@ Pizza.prototype.getCost = function(pizza) {
   }
 
   let toppingsCost = 0;
-  if (pizza.toppings.includes('olives') || pizza.toppings.includes('onion') || pizza.toppings.includes('peppers')) {
-    toppingsCost += 0.50; }
-  if (pizza.toppings.includes('artichoke') || pizza.toppings.includes('tomato')) {
-    toppingsCost += 1.00; }
-  if (pizza.toppings.includes('ham') || pizza.toppings.includes('chicken')) {
-    toppingsCost += 2.00; }
+  pizza.toppings.forEach(function(topping) {
+    if (topping.includes('olives') || topping.includes('onion') || topping.includes('peppers')) {
+      toppingsCost += 0.50; }
+    if (topping.includes('artichoke') || topping.includes('tomato')) {
+      toppingsCost += 1.00; }
+    if (topping.includes('ham') || topping.includes('chicken')) {
+      toppingsCost += 2.00; }
+  });
 
   let totalCost = cost + toppingsCost;
   return totalCost;
@@ -48,7 +50,6 @@ function handlePizzaOrder(e) {
   });
 
   let pizzaOrder = new Pizza(toppings, pizzaSize);
-  console.log(pizzaOrder)
   
   h2.append("Order placed!");
   paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`);
@@ -60,6 +61,7 @@ function clearPizzaOrder (e) {
   e.preventDefault();
   const h2Element = document.querySelector("h2");
   const pElement = document.querySelector("p");
+
   h2Element.remove();
   pElement.remove();
   document.getElementById("submit").disabled = false;
