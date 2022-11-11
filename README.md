@@ -41,8 +41,14 @@ Code: let pizza = new Pizza([], "small");
 Expected Output: 25.00
 
 Test: It will add $0.50 to the total pizza cost when olives, onions, or pepper toppings are selected.
-Code: pizza.getCost();
-Expected Output: 26.50
+Code: let pizza = new Pizza(["olives"], "small");
+      pizza.getCost();
+Expected Output: 15.50
+
+Test: It will add $1.00 to the total pizza cost when tomato or artichoke toppings are selected.
+Code: let pizza = new Pizza(["artichoke"], "medium");
+      pizza.getCost();
+Expected Output: 21.00
 ```
 
 ## Known Bugs
