@@ -36,7 +36,7 @@ Expected Output: pizza { toppings: ["artichoke", "olives"], size: "large" }
 Describe Pizza.prototype.getCost()
 
 Test: It will return the price of a small, medium, or large Pizza with no toppings.
-Code: let pizza = new Pizza([], "small");
+Code: let pizza = new Pizza([], "large");
       pizza.getCost();
 Expected Output: 25.00
 
