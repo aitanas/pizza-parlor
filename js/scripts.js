@@ -5,7 +5,7 @@ this.toppings = toppings;
 this.size = size;
 }
 
-Pizza.prototype.getCost = function(pizza) {
+Pizza.prototype.getCost = function(pizza) { // should not have pizza logic
   let cost = 0;
   switch (pizza.size) {
     case 'small':
@@ -29,7 +29,8 @@ Pizza.prototype.getCost = function(pizza) {
       toppingsCost += 2.00; }
   });
 
-  let totalCost = cost + toppingsCost;
+  let totalCost = cost += toppingsCost;
+  console.log(totalCost)
   return totalCost;
 };
 
@@ -52,7 +53,7 @@ function handlePizzaOrder(e) {
   let pizzaOrder = new Pizza(toppings, pizzaSize);
   
   h2.append("Order placed!");
-  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`);
+  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`); // missing decimal point -- branching statement
   document.body.append(h2, paragraph);
   document.getElementById("submit").disabled = true;
 }
