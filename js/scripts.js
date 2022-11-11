@@ -5,9 +5,9 @@ this.toppings = toppings;
 this.size = size;
 }
 
-Pizza.prototype.getCost = function(pizza) { // should not have pizza logic
+Pizza.prototype.getCost = function() { 
   let cost = 0;
-  switch (pizza.size) {
+  switch (this.size) {
     case 'small':
       cost += 15.00
       break;
@@ -20,17 +20,12 @@ Pizza.prototype.getCost = function(pizza) { // should not have pizza logic
   }
 
   let toppingsCost = 0;
-  pizza.toppings.forEach(function(topping) {
+  this.toppings.forEach(function(topping) {
     if (topping.includes('olives') || topping.includes('onion') || topping.includes('peppers')) {
       toppingsCost += 0.50; }
-    if (topping.includes('artichoke') || topping.includes('tomato')) {
-      toppingsCost += 1.00; }
-    if (topping.includes('ham') || topping.includes('chicken')) {
-      toppingsCost += 2.00; }
   });
 
   let totalCost = cost += toppingsCost;
-  console.log(totalCost)
   return totalCost;
 };
 
@@ -53,7 +48,7 @@ function handlePizzaOrder(e) {
   let pizzaOrder = new Pizza(toppings, pizzaSize);
   
   h2.append("Order placed!");
-  paragraph.append(`Your total is $${pizzaOrder.getCost(pizzaOrder)}0. Thank you!`); // missing decimal point -- branching statement
+  paragraph.append(`Your total is $${pizzaOrder.getCost()}. Thank you!`); // missing decimal point -- branching statement
   document.body.append(h2, paragraph);
   document.getElementById("submit").disabled = true;
 }
