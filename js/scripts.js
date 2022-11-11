@@ -23,6 +23,8 @@ Pizza.prototype.getCost = function() {
   this.toppings.forEach(function(topping) {
     if (topping.includes('olives') || topping.includes('onion') || topping.includes('peppers')) {
       toppingsCost += 0.50; }
+    if (topping.includes('artichoke') || topping.includes('tomato')) {
+      toppingsCost += 1.00; }
   });
 
   let totalCost = cost += toppingsCost;
