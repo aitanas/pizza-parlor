@@ -25,6 +25,8 @@ Pizza.prototype.getCost = function() {
       toppingsCost += 0.50; }
     if (topping.includes('artichoke') || topping.includes('tomato')) {
       toppingsCost += 1.00; }
+    if (topping.includes('ham') || topping.includes('chicken')) {
+      toppingsCost += 2.00; }
   });
 
   let totalCost = cost += toppingsCost;
