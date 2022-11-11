@@ -49,6 +49,11 @@ Test: It will add $1.00 to the total pizza cost when tomato or artichoke topping
 Code: let pizza = new Pizza(["artichoke"], "medium");
       pizza.getCost();
 Expected Output: 21.00
+
+Test: It will add $2.00 to the total pizza cost when ham or chicken toppings are selected.
+Code: let pizza = new Pizza(["artichoke", "ham"], "medium");
+      pizza.getCost();
+Expected Output: $23.00
 ```
 
 ## Known Bugs
